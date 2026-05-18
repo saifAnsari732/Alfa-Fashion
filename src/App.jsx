@@ -13,6 +13,7 @@ import MobileBottomNav from './components/MobileBottomNav.jsx';
 import MapSection from './components/MapSection.jsx';
 import OrderPage from './components/OrderPage.jsx';
 import CollectionPage from './components/CollectionPage.jsx';
+import Preloader from './components/Preloader.jsx';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -94,6 +95,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-[var(--color-bg-light)] dark:bg-[var(--color-bg-dark)] text-[var(--color-text-light)] dark:text-[var(--color-text-dark)] transition-colors duration-300 selection:bg-[var(--color-primary)] selection:text-white">
+        <Preloader />
         <Navbar 
           cartCount={cartCount} 
           wishlistCount={wishlist.length}
