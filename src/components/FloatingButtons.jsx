@@ -20,7 +20,7 @@ const InstagramIcon = ({ className = "w-6 h-6" }) => (
 
 const FloatingButtons = () => {
   return (
-    <div className="fixed bottom-24 md:bottom-8 right-6 z-40 flex flex-col gap-4">
+    <div className="fixed bottom-28 md:bottom-8 right-4 md:right-6 z-[60] flex flex-col gap-4">
       <motion.a
         href="https://wa.me/917985212241"
         target="_blank"

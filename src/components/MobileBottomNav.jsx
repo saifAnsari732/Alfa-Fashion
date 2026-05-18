@@ -8,8 +8,8 @@ const MobileBottomNav = ({ cartCount, onCartClick }) => {
   const location = useLocation();
 
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-t border-slate-200 dark:border-white/5 pb-safe transition-colors">
-      <div className="flex justify-around py-4">
+    <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md border-t border-slate-200 dark:border-white/5 pb-6 transition-colors">
+      <div className="flex justify-around pt-4 pb-2">
         <Link to="/" className={`flex flex-col items-center gap-1.5 ${location.pathname === '/' ? 'text-blue-600' : 'text-slate-500 dark:text-slate-400'}`}>
           <div className="w-6 h-6 flex items-center justify-center">
             <Grid3X3 className="w-6 h-6" />

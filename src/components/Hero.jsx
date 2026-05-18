@@ -4,14 +4,14 @@ import { Phone } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden bg-white dark:bg-slate-950">
+    <section id="home" className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-white dark:bg-slate-950 pt-16">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[420px] h-[420px] rounded-full bg-blue-500/10 blur-3xl" />
         <div className="absolute bottom-10 right-10 w-[320px] h-[320px] rounded-full bg-sky-500/10 blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 md:gap-12 items-center">
           <div className="text-center lg:text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -29,7 +29,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-black font-display leading-[1.05] tracking-tight text-slate-900 dark:text-white"
+              className="text-[2.5rem] sm:text-5xl lg:text-6xl font-black font-display leading-[1.1] tracking-tight text-slate-900 dark:text-white"
             >
               Elevate Your Shop with
               <br />
@@ -42,18 +42,18 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-sm sm:text-lg lg:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 mt-6 sm:mt-8 leading-relaxed font-medium"
+              className="text-[13px] sm:text-lg lg:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 mt-4 sm:mt-8 leading-relaxed font-medium"
             >
-              Stock your store with premium garments and trending outfits.
+              Apni shop ko premium garments aur latest trending outfits se stock karein.
               <br />
-              Perfect for wholesalers, retailers, and shop owners seeking quality and style.
+              Wholesalers aur retailers ke liye sabse best quality aur style ki guarantee.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="mt-8 sm:mt-12 flex flex-col gap-3 sm:flex-row sm:items-center justify-center lg:justify-start w-full"
+              className="mt-8 sm:mt-12 flex flex-col gap-2.5 sm:flex-row sm:items-center justify-center lg:justify-start w-full"
             >
               <a
                 href="/#categories"
@@ -62,10 +62,10 @@ const Hero = () => {
                 Explore Collections
               </a>
               <a
-                href="#reviews"
-                className="inline-flex items-center justify-center px-6 sm:px-10 py-3 sm:py-4 rounded-3xl bg-slate-100 dark:bg-slate-900/80 text-slate-900 dark:text-white font-black tracking-wide hover:bg-slate-200 dark:hover:bg-slate-800 transition-all border border-slate-200 dark:border-slate-700 w-full sm:w-auto text-sm sm:text-base"
+                href="https://teal-pudding-4b21ee.netlify.app/"
+                className="inline-flex items-center justify-center px-6 sm:px-10 py-3 sm:py-4 rounded-3xl bg-slate-200 dark:bg-slate-900/80 text-slate-900 dark:text-white font-black tracking-wide hover:bg-slate-200 dark:hover:bg-slate-800 transition-all border border-slate-200 dark:border-slate-700 w-full sm:w-auto text-sm sm:text-base"
               >
-                Read Reviews
+              Give Reviews
               </a>
               <a
                 href="https://wa.me/917985212241"
