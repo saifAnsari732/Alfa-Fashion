@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import WhatsAppIcon from './WhatsAppIcon.jsx';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ShoppingCart, Star } from 'lucide-react';
@@ -48,12 +49,14 @@ const DealCard = ({ product, onAddToCart }) => (
           <span className="text-slate-400 line-through text-[10px] sm:text-sm font-bold">₹{product.originalPrice}</span>
           <span className="text-xl sm:text-3xl font-black text-slate-900 dark:text-white">₹{product.price}</span>
         </div>
-        <button 
-          onClick={(e) => { e.preventDefault(); onAddToCart(product); }}
-          className="w-10 h-10 sm:w-14 sm:h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-xl sm:rounded-2xl flex items-center justify-center transition-all shadow-xl shadow-blue-600/20 active:scale-95 z-20 relative"
+        <a 
+          href={`https://wa.me/917985212241?text=${encodeURIComponent(`Hi, I want to order ${product.name} (Price: ₹${product.price})`)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-10 h-10 sm:w-14 sm:h-14 bg-green-600 hover:bg-green-700 text-white rounded-xl sm:rounded-2xl flex items-center justify-center transition-all shadow-xl shadow-green-600/20 active:scale-95 z-20 relative"
         >
-          <ShoppingCart className="w-5 h-5 sm:w-6 sm:h-6" />
-        </button>
+          <WhatsAppIcon className="w-5 h-5 sm:w-6 sm:h-6 fill-current" />
+        </a>
       </div>
     </div>
   </motion.div>

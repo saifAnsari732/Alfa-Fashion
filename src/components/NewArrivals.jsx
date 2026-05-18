@@ -10,6 +10,7 @@ import {
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { categories, products, reviews, reels, trendingItems } from '../data/mockData.js';
+import WhatsAppIcon from './WhatsAppIcon.jsx';
 
 const InstagramIcon = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -112,14 +113,16 @@ const NewArrivals = ({ onAddToCart, onAddToWishlist, wishlist }) => {
                     >
                       <Heart className={`w-6 h-6 ${wishlist.includes(product.id) ? 'fill-current' : ''}`} />
                     </motion.button>
-                    <motion.button
-                      onClick={() => onAddToCart(product)}
+                    <motion.a
+                      href={`https://wa.me/917985212241?text=${encodeURIComponent(`Hi, I want to order ${product.name} (Price: ₹${product.price})`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      className="w-12 h-12 rounded-2xl bg-white text-blue-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors shadow-2xl"
+                      className="w-12 h-12 rounded-2xl bg-white text-green-600 flex items-center justify-center hover:bg-green-600 hover:text-white transition-colors shadow-2xl"
                     >
-                      <ShoppingBag className="w-6 h-6" />
-                    </motion.button>
+                      <WhatsAppIcon className="w-6 h-6" />
+                    </motion.a>
                   </div>
                 </div>
 
@@ -149,13 +152,15 @@ const NewArrivals = ({ onAddToCart, onAddToWishlist, wishlist }) => {
                       <span className="text-slate-400 dark:text-slate-500 line-through text-[10px] sm:text-xs font-bold leading-tight">₹{product.originalPrice}</span>
                       <span className="text-base sm:text-xl font-black text-slate-900 dark:text-white leading-tight">₹{product.price}</span>
                     </div>
-                    <button 
-                      onClick={() => onAddToCart(product)}
-                      className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 hover:bg-blue-700 text-white rounded-xl flex items-center justify-center transition-all shadow-lg shadow-blue-600/20 active:scale-95 z-20 relative"
-                      aria-label="Add to cart"
+                    <a 
+                      href={`https://wa.me/917985212241?text=${encodeURIComponent(`Hi, I want to order ${product.name} (Price: ₹${product.price})`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-8 h-8 sm:w-10 sm:h-10 bg-green-600 hover:bg-green-700 text-white rounded-xl flex items-center justify-center transition-all shadow-lg shadow-green-600/20 active:scale-95 z-20 relative"
+                      aria-label="Order on WhatsApp"
                     >
-                      <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5" />
-                    </button>
+                      <WhatsAppIcon className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
+                    </a>
                   </div>
                 </div>
               </div>

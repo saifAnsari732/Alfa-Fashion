@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import WhatsAppIcon from './WhatsAppIcon.jsx';
 import { 
   ShoppingBag, Heart, Search, Menu, X, Phone, 
   MapPin, ArrowRight, Star, Play,
@@ -29,12 +30,12 @@ const FloatingButtons = () => {
         animate={{ scale: 1, y: 0 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center shadow-2xl shadow-blue-600/30 relative group"
+        className="w-16 h-16 rounded-2xl bg-green-600 flex items-center justify-center shadow-2xl shadow-green-600/30 relative group"
       >
         <div className="absolute right-full mr-4 px-3 py-1.5 bg-slate-900 border border-white/10 rounded-lg text-white text-[10px] font-black uppercase tracking-widest whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
           Chat with Us
         </div>
-        <Phone className="w-7 h-7 text-white" />
+        <WhatsAppIcon className="w-7 h-7 text-white" />
       </motion.a>
 
     </div>

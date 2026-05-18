@@ -1,4 +1,5 @@
 import React from 'react';
+import WhatsAppIcon from './WhatsAppIcon.jsx';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ShoppingBag, Star, Phone, ArrowRight, Heart } from 'lucide-react';
@@ -104,14 +105,16 @@ const ComboNewArrived = ({ onAddToCart, onAddToWishlist, wishlist }) => {
                       <Heart className={`w-5 h-5 ${wishlist && wishlist.includes(product.id) ? 'fill-current' : ''}`} />
                     </motion.button>
 
-                    <motion.button
-                      onClick={() => onAddToCart(product)}
+                    <motion.a
+                      href={`https://wa.me/917985212241?text=${encodeURIComponent(`Hi, I want to order the combo: ${product.name} (Price: ₹${product.price})`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      className="w-11 h-11 rounded-2xl bg-white text-blue-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors shadow-lg"
+                      className="w-11 h-11 rounded-2xl bg-white text-green-600 flex items-center justify-center hover:bg-green-600 hover:text-white transition-colors shadow-lg"
                     >
-                      <ShoppingBag className="w-5 h-5" />
-                    </motion.button>
+                      <WhatsAppIcon className="w-5 h-5" />
+                    </motion.a>
                   </div>
                 </div>
 
@@ -149,7 +152,7 @@ const ComboNewArrived = ({ onAddToCart, onAddToWishlist, wishlist }) => {
                       onClick={() => handleWhatsAppOrder(product)}
                       className="w-full text-[9px] sm:text-[10px] font-black text-white bg-green-600 hover:bg-green-700 uppercase tracking-widest py-2.5 px-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-1.5 shadow-md shadow-green-600/10 active:scale-95"
                     >
-                      <Phone className="w-3.5 h-3.5 fill-current" /> Order on WA
+                      <WhatsAppIcon className="w-3.5 h-3.5 fill-current" /> Order on WA
                     </button>
                   </div>
                 </div>
