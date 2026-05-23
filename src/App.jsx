@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { products } from './data/mockData.js';
 import Navbar from './components/Navbar.jsx';
 import HomePage from './components/HomePage.jsx';
-import DealsPage from './components/DealsPage.jsx';
 import ProductDetail from './components/ProductDetail.jsx';
 import Footer from './components/Footer.jsx';
 import CartDrawer from './components/CartDrawer.jsx';
@@ -14,6 +13,7 @@ import MapSection from './components/MapSection.jsx';
 import OrderPage from './components/OrderPage.jsx';
 import CollectionPage from './components/CollectionPage.jsx';
 import Preloader from './components/Preloader.jsx';
+import OfferPage from './components/OfferPage.jsx';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -115,9 +115,6 @@ function App() {
               wishlist={wishlist}
             />
           } />
-          <Route path="/deals" element={
-            <DealsPage onAddToCart={addToCart} />
-          } />
           <Route path="/product/:id" element={
             <ProductDetail onAddToCart={addToCart} onAddToWishlist={addToWishlist} wishlist={wishlist} />
           } />
@@ -125,6 +122,7 @@ function App() {
             <CollectionPage onAddToCart={addToCart} />
           } />
           <Route path="/order" element={<OrderPage />} />
+          <Route path="/offers" element={<OfferPage />} />
         </Routes>
 
         <MapSection />

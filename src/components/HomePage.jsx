@@ -7,7 +7,6 @@ import WhyChooseUs from './WhyChooseUs.jsx';
 import StatsSection from './StatsSection.jsx';
 import ReelsGallery from './ReelsGallery.jsx';
 import ComboNewArrived from './ComboNewArrived.jsx';
-import Reviews from './Reviews.jsx';
 import WhatsAppCTA from './WhatsAppCTA.jsx';
 
 const HomePage = ({ onAddToCart, onAddToWishlist, wishlist }) => {
@@ -29,7 +28,6 @@ const HomePage = ({ onAddToCart, onAddToWishlist, wishlist }) => {
       <WhyChooseUs />
       <StatsSection />
       <ReelsGallery />
-      <Reviews />
       <WhatsAppCTA />
     </main>
   );

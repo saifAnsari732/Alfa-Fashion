@@ -41,7 +41,7 @@ const Preloader = () => {
                 className="absolute inset-2 rounded-full border-[3px] border-transparent border-b-sky-500 border-l-sky-300"
               />
               <div className="absolute inset-4 rounded-full bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center shadow-lg shadow-blue-500/40">
-                <span className="text-white font-black text-2xl sm:text-3xl">FP</span>
+                <span className="text-white font-black text-2xl sm:text-3xl">AL</span>
               </div>
             </div>
             
@@ -52,7 +52,7 @@ const Preloader = () => {
               className="mt-8 flex flex-col items-center gap-3"
             >
               <h1 className="text-xl sm:text-2xl font-black font-display text-slate-900 dark:text-white tracking-tight">
-                Factory Price
+                Alfa Lifestyle
               </h1>
               <div className="flex items-center gap-1.5">
                 {[0, 1, 2].map((i) => (

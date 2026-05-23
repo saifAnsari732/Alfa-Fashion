@@ -10,9 +10,9 @@ const ComboNewArrived = ({ onAddToCart, onAddToWishlist, wishlist }) => {
   const comboProducts = products.filter(p => p.category === 'Combo');
 
   const handleWhatsAppOrder = (product) => {
-    const message = `Hello! I would like to order the combo: *${product.name}* (Price: ₹${product.price}) from Factory Price. Please confirm availability.`;
+    const message = `Hello! I would like to order the combo: *${product.name}* (Price: ₹${product.price}) from Alfa Lifestyle. Please confirm availability.`;
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/917985212241?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/9120594727?text=${encodedMessage}`, '_blank');
   };
 
   return (
@@ -69,11 +69,10 @@ const ComboNewArrived = ({ onAddToCart, onAddToWishlist, wishlist }) => {
               transition={{ delay: index * 0.1, duration: 0.6 }}
               className="group flex flex-col h-full"
             >
-              <div className="relative rounded-[2rem] overflow-hidden bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/5 card-hover shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col h-full">
-                
+              <div className="relative rounded-[2rem] overflow-hidden bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/5 card-hover shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col h-full group/card">
+                <Link to={`/product/${product.id}`} className="absolute inset-0 z-10" aria-label={`View ${product.name}`} />
                 {/* Image Container */}
                 <div className="relative aspect-[3/4] overflow-hidden bg-slate-100 dark:bg-slate-800">
-                  <Link to={`/product/${product.id}`} className="absolute inset-0 z-10" aria-label={`View ${product.name}`} />
                   
                   <img
                     src={product.image}
@@ -93,12 +92,12 @@ const ComboNewArrived = ({ onAddToCart, onAddToWishlist, wishlist }) => {
                   </div>
 
                   {/* Actions Overlay */}
-                  <div className="absolute inset-0 bg-blue-950/20 opacity-0 group-hover:opacity-100 transition-opacity z-20 flex items-center justify-center gap-3">
+                  <div className="absolute inset-0 bg-blue-950/20 opacity-0 group-hover:opacity-100 transition-opacity z-20 flex items-center justify-center gap-3 pointer-events-none">
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      onClick={() => onAddToWishlist(product)}
-                      className={`w-11 h-11 rounded-2xl flex items-center justify-center transition-colors ${
+                      onClick={(e) => { e.preventDefault(); e.stopPropagation(); onAddToWishlist(product); }}
+                      className={`w-11 h-11 rounded-2xl flex items-center justify-center transition-colors pointer-events-auto ${
                         wishlist && wishlist.includes(product.id) ? 'bg-blue-600 text-white' : 'bg-white/25 backdrop-blur-md text-white hover:bg-blue-600'
                       }`}
                     >
@@ -106,9 +105,10 @@ const ComboNewArrived = ({ onAddToCart, onAddToWishlist, wishlist }) => {
                     </motion.button>
 
                     <motion.a
-                      href={`https://wa.me/917985212241?text=${encodeURIComponent(`Hi, I want to order the combo: ${product.name} (Price: ₹${product.price})`)}`}
+                      href={`https://wa.me/9120594727?text=${encodeURIComponent(`Hi, I want to order the combo: ${product.name} (Price: ₹${product.price})`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       className="w-11 h-11 rounded-2xl bg-white text-green-600 flex items-center justify-center hover:bg-green-600 hover:text-white transition-colors shadow-lg"
@@ -149,8 +149,8 @@ const ComboNewArrived = ({ onAddToCart, onAddToWishlist, wishlist }) => {
 
                     {/* WhatsApp Quick Order button */}
                     <button
-                      onClick={() => handleWhatsAppOrder(product)}
-                      className="w-full text-[9px] sm:text-[10px] font-black text-white bg-green-600 hover:bg-green-700 uppercase tracking-widest py-2.5 px-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-1.5 shadow-md shadow-green-600/10 active:scale-95"
+                      onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleWhatsAppOrder(product); }}
+                      className="w-full text-[9px] sm:text-[10px] font-black text-white bg-green-600 hover:bg-green-700 uppercase tracking-widest py-2.5 px-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-1.5 shadow-md shadow-green-600/10 active:scale-95 relative z-20"
                     >
                       <WhatsAppIcon className="w-3.5 h-3.5 fill-current" /> Order on WA
                     </button>

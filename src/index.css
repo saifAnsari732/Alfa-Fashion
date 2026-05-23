@@ -4,27 +4,27 @@
 @tailwind utilities;
 
 :root {
-  /* Color Palette - Premium & Modern */
-  --color-primary: #dc2626;
-  --color-primary-light: #ef4444;
-  --color-primary-dark: #991b1b;
-  --color-secondary: #1e40af;
-  --color-secondary-dark: #1e3a8a;
-  --color-accent: #fbbf24;
+  /* Color Palette - Premium Light Luxury */
+  --color-primary: #8C7B65; /* Elegant taupe/gold */
+  --color-primary-light: #B8A895;
+  --color-primary-dark: #635645;
+  --color-secondary: #2C302E; /* Charcoal slate */
+  --color-secondary-dark: #1A1C1B;
+  --color-accent: #E3D5CA;
   
-  /* Dark Mode Surfaces */
-  --color-bg-dark: #020617;
-  --color-surface-dark: #0f172a;
-  --color-border-dark: rgba(255, 255, 255, 0.08);
-  --color-text-dark: #ffffff;
-  --color-text-muted-dark: #94a3b8;
+  /* Always Light Mode Surfaces for Premium Feel */
+  --color-bg-dark: #FAF8F5;
+  --color-surface-dark: #FFFFFF;
+  --color-border-dark: rgba(0, 0, 0, 0.05);
+  --color-text-dark: #2C302E;
+  --color-text-muted-dark: #8B8B8B;
 
   /* Light Mode Surfaces */
-  --color-bg-light: #f8fafc;
-  --color-surface-light: #ffffff;
-  --color-border-light: rgba(0, 0, 0, 0.08);
-  --color-text-light: #0f172a;
-  --color-text-muted-light: #64748b;
+  --color-bg-light: #FAF8F5; /* Creamy off-white */
+  --color-surface-light: #FFFFFF;
+  --color-border-light: rgba(0, 0, 0, 0.05);
+  --color-text-light: #2C302E; /* Charcoal */
+  --color-text-muted-light: #8B8B8B;
 
   /* Typography */
   --font-main: 'Inter', sans-serif;
@@ -87,10 +87,10 @@ body.dark {
 }
 
 .glass-dark {
-  background: rgba(2, 6, 23, 0.85);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--color-border-dark);
+  border: 1px solid var(--color-border-light);
 }
 
 /* Gradient Backgrounds */

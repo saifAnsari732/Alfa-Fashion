@@ -76,10 +76,10 @@ const NewArrivals = ({ onAddToCart, onAddToWishlist, wishlist }) => {
               transition={{ delay: index * 0.1, duration: 0.6 }}
               className="group"
             >
-              <div className="relative rounded-[2rem] overflow-hidden bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/5 card-hover shadow-xl shadow-slate-200/20 dark:shadow-none">
+              <div className="relative rounded-[2rem] overflow-hidden bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/5 card-hover shadow-xl shadow-slate-200/20 dark:shadow-none h-full flex flex-col group/card">
+                <Link to={`/product/${product.id}`} className="absolute inset-0 z-10" aria-label={`View details for ${product.name}`} />
                 {/* Image */}
                 <div className="relative aspect-[4/5] overflow-hidden bg-slate-100 dark:bg-slate-800">
-                  <Link to={`/product/${product.id}`} className="absolute inset-0 z-10" aria-label={`View details for ${product.name}`} />
                   <img 
                     src={product.image} 
                     alt={product.name}
@@ -102,21 +102,22 @@ const NewArrivals = ({ onAddToCart, onAddToWishlist, wishlist }) => {
                   </div>
 
                   {/* Actions Overlay */}
-                  <div className="absolute inset-0 bg-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                  <div className="absolute inset-0 bg-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 z-20 pointer-events-none">
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      onClick={() => onAddToWishlist(product)}
-                      className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-colors ${
+                      onClick={(e) => { e.preventDefault(); e.stopPropagation(); onAddToWishlist(product); }}
+                      className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-colors pointer-events-auto ${
                         wishlist.includes(product.id) ? 'bg-blue-600 text-white' : 'bg-white/20 backdrop-blur text-white hover:bg-blue-600'
                       }`}
                     >
                       <Heart className={`w-6 h-6 ${wishlist.includes(product.id) ? 'fill-current' : ''}`} />
                     </motion.button>
                     <motion.a
-                      href={`https://wa.me/917985212241?text=${encodeURIComponent(`Hi, I want to order ${product.name} (Price: ₹${product.price})`)}`}
+                      href={`https://wa.me/9120594727?text=${encodeURIComponent(`Hi, I want to order ${product.name} (Price: ₹${product.price})`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       className="w-12 h-12 rounded-2xl bg-white text-green-600 flex items-center justify-center hover:bg-green-600 hover:text-white transition-colors shadow-2xl"
@@ -153,9 +154,10 @@ const NewArrivals = ({ onAddToCart, onAddToWishlist, wishlist }) => {
                       <span className="text-base sm:text-xl font-black text-slate-900 dark:text-white leading-tight">₹{product.price}</span>
                     </div>
                     <a 
-                      href={`https://wa.me/917985212241?text=${encodeURIComponent(`Hi, I want to order ${product.name} (Price: ₹${product.price})`)}`}
+                      href={`https://wa.me/9120594727?text=${encodeURIComponent(`Hi, I want to order ${product.name} (Price: ₹${product.price})`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="w-8 h-8 sm:w-10 sm:h-10 bg-green-600 hover:bg-green-700 text-white rounded-xl flex items-center justify-center transition-all shadow-lg shadow-green-600/20 active:scale-95 z-20 relative"
                       aria-label="Order on WhatsApp"
                     >

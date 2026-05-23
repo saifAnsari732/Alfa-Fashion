@@ -18,8 +18,8 @@ const MapSection = () => {
           <div className="space-y-2">
             <span className="text-amber-600 text-xs font-black tracking-[0.2em] uppercase">Visit Us</span>
             <h2 className="text-4xl sm:text-5xl font-black font-display text-slate-900 leading-tight">
-              Aaiye Padrauna — <br/>
-              <span className="text-[#E04B2F] italic">aur ghar le jaiye saving</span>
+              Visit Alfa Lifestyle — <br/>
+              <span className="text-[#E04B2F] italic">for the best men's fashion</span>
             </h2>
           </div>
 
@@ -30,7 +30,7 @@ const MapSection = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-slate-900 font-black text-lg">Address</span>
-                <span className="text-slate-600 font-medium leading-relaxed">Bawali Chowk, Rajkiya Kanya School ke bagal me, Desi Bhatti ke paas, Padrauna, Kushinagar (UP)</span>
+                <span className="text-slate-600 font-medium leading-relaxed">Samaur Bazar, Kushinagar, UP, India</span>
               </div>
             </li>
             <li className="flex items-start gap-4">
@@ -39,7 +39,7 @@ const MapSection = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-slate-900 font-black text-lg">Call / WhatsApp</span>
-                <span className="text-red-600 font-bold">+91 79852 12241</span>
+                <span className="text-red-600 font-bold">+91 9120594727, +91 9120497110</span>
               </div>
             </li>
             <li className="flex items-start gap-4">
@@ -57,7 +57,7 @@ const MapSection = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-slate-900 font-black text-lg">Instagram</span>
-                <span className="text-red-600 font-bold">@factoryprice_padrauna</span>
+                <span className="text-red-600 font-bold">@alfa_lifestyle_01</span>
               </div>
             </li>
           </ul>
@@ -74,7 +74,7 @@ const MapSection = () => {
               allowFullScreen="" 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
-              title="Factory Price Location"
+              title="Alfa Lifestyle Location"
             ></iframe>
           </div>
         </div>

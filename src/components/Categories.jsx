@@ -49,7 +49,7 @@ const Categories = () => {
               transition={{ delay: index * 0.1, duration: 0.6 }}
               className="group relative cursor-pointer"
             >
-              <div className="relative h-[300px] sm:h-[500px] rounded-2xl sm:rounded-3xl overflow-hidden glass border border-[var(--color-border-dark)] shadow-2xl transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_20px_50px_rgba(220,38,38,0.2)]">
+              <div className="relative aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden glass border border-[var(--color-border-light)] shadow-2xl transition-all duration-500 group-hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
                 {/* Background Image with Fallback */}
                 <div className="absolute inset-0 bg-slate-200 dark:bg-slate-800" />
                 <img 

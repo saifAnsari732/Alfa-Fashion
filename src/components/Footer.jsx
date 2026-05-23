@@ -28,18 +28,18 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex flex-col">
               <h3 className="text-3xl font-black text-blue-700 dark:text-blue-500 tracking-tighter leading-none mb-1">
-                Factory Price
+                Alfa Lifestyle
               </h3>
-              <p className="text-[10px] text-blue-500 font-bold uppercase tracking-widest">Padrauna - Wholesale & Retail</p>
+              <p className="text-[10px] text-blue-500 font-bold uppercase tracking-widest">Samaur Bazar, Kushinagar</p>
             </div>
             <p className="text-slate-600 dark:text-gray-400 font-medium leading-relaxed">
-              Premium ready-made garments for retailers, shop owners, and wholesalers. Direct from factory to your store.
+              All over India deliver. Premium men's trending clothes for your lifestyle.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-500 group shadow-sm">
                 <InstagramIcon className="w-6 h-6 text-slate-500 dark:text-gray-400 group-hover:text-white" />
               </a>
-              <a href="https://wa.me/917985212241" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center hover:bg-green-600 hover:text-white hover:border-green-600 transition-all duration-500 group shadow-sm">
+              <a href="https://wa.me/9120594727" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center hover:bg-green-600 hover:text-white hover:border-green-600 transition-all duration-500 group shadow-sm">
                 <Phone className="w-6 h-6 text-slate-500 dark:text-gray-400 group-hover:text-white" />
               </a>
             </div>
@@ -64,7 +64,7 @@ const Footer = () => {
           <div>
             <h4 className="text-slate-900 dark:text-white font-black uppercase tracking-widest text-sm mb-8">Services</h4>
             <ul className="space-y-4">
-              {["Premium Shirts", "Kids Collection", "Footwear", "Ethnic Wear", "Bulk Orders", "Shop Register"].map((service) => (
+              {["Trending Jeans", "Premium Shirts", "Streetwear Tees", "Jackets", "Cargos", "Accessories"].map((service) => (
                 <li key={service}>
                   <a href="#services" className="text-slate-600 dark:text-gray-400 font-bold hover:text-blue-600 dark:hover:text-blue-500 transition-colors flex items-center gap-2 group">
                     <span className="w-0 group-hover:w-4 h-[2px] bg-blue-600 transition-all" />
@@ -83,13 +83,13 @@ const Footer = () => {
                 <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-white/5 flex items-center justify-center flex-shrink-0 text-blue-600">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <span className="text-slate-600 dark:text-gray-400 font-medium">📍 Location: Bawali Chowk, Rajkiya Kanya School ke paas, Desi Sharab Bhatti ke side</span>
+                <span className="text-slate-600 dark:text-gray-400 font-medium">📍 Location: Samaur Bazar, Kushinagar, UP, India</span>
               </li>
               <li className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-white/5 flex items-center justify-center flex-shrink-0 text-blue-600">
                   <Phone className="w-5 h-5" />
                 </div>
-                <span className="text-slate-600 dark:text-gray-400 font-bold">+91 79852 12241</span>
+                <span className="text-slate-600 dark:text-gray-400 font-bold">+91 9120594727, +91 9120497110</span>
               </li>
               <li className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-white/5 flex items-center justify-center flex-shrink-0 text-blue-600">
@@ -104,7 +104,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="pt-12 border-t border-slate-200 dark:border-white/5 flex flex-col sm:flex-row justify-between items-center gap-6">
           <p className="text-slate-500 font-bold text-xs uppercase tracking-widest">
-            © 2025 Factory Price. Premium Wholesale Clothing.
+            © 2025 Alfa Lifestyle. Premium Men's Wear.
           </p>
           <div className="flex gap-8">
             <a href="#" className="text-slate-500 font-bold text-xs uppercase tracking-widest hover:text-blue-600 transition-colors">Privacy Policy</a>

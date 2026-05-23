@@ -20,6 +20,40 @@ const InstagramIcon = ({ className = "w-6 h-6" }) => (
 
 const CartDrawer = ({ isOpen, onClose, cart, onRemove, onUpdateQuantity }) => {
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const [couponCode, setCouponCode] = useState('');
+  const [appliedDiscount, setAppliedDiscount] = useState(0);
+  const [appliedCoupon, setAppliedCoupon] = useState('');
+
+  const handleApplyCoupon = () => {
+    const code = couponCode.toUpperCase();
+    if (code === 'ALFA10') {
+      if (total >= 999) {
+        setAppliedDiscount(Math.floor(total * 0.10));
+        setAppliedCoupon('ALFA10');
+      } else {
+        alert('Minimum order value for ALFA10 is ₹999');
+      }
+    } else if (code === 'COMBO20') {
+      const comboTotal = cart.filter(item => item.category === 'Combo').reduce((sum, item) => sum + item.price * item.quantity, 0);
+      if (comboTotal > 0) {
+        setAppliedDiscount(Math.floor(comboTotal * 0.20));
+        setAppliedCoupon('COMBO20');
+      } else {
+        alert('COMBO20 is only valid on combo products');
+      }
+    } else if (code === 'FREESHIP') {
+       if (total >= 1499) {
+          setAppliedDiscount(0);
+          setAppliedCoupon('FREESHIP (Free Shipping)');
+       } else {
+          alert('FREESHIP requires minimum ₹1499 order');
+       }
+    } else {
+      alert('Invalid coupon code');
+    }
+  };
+
+  const finalTotal = total - appliedDiscount;
 
   return (
     <AnimatePresence>
@@ -102,15 +136,39 @@ const CartDrawer = ({ isOpen, onClose, cart, onRemove, onUpdateQuantity }) => {
 
               {cart.length > 0 && (
                 <div className="p-8 border-t border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-slate-900/50">
+                  <div className="mb-6 flex gap-2">
+                    <input 
+                      type="text" 
+                      placeholder="Coupon Code" 
+                      value={couponCode}
+                      onChange={(e) => setCouponCode(e.target.value)}
+                      className="flex-1 px-4 py-3 rounded-xl border border-slate-200 text-sm font-bold bg-white text-[var(--color-text-light)] focus:outline-none focus:border-[var(--color-primary)] uppercase"
+                    />
+                    <button 
+                      onClick={handleApplyCoupon}
+                      className="px-6 py-3 bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white rounded-xl text-sm font-black tracking-widest uppercase transition-colors"
+                    >
+                      Apply
+                    </button>
+                  </div>
+                  {appliedCoupon && (
+                    <div className="flex justify-between items-center mb-4 text-sm font-bold text-green-600 bg-green-50 p-3 rounded-lg border border-green-200">
+                      <span>Coupon Applied: {appliedCoupon}</span>
+                      <span>-₹{appliedDiscount}</span>
+                    </div>
+                  )}
                   <div className="flex justify-between items-end mb-8">
                     <div>
                       <p className="text-slate-500 font-bold uppercase tracking-widest text-[10px] mb-1">Estimated Total</p>
                       <p className="text-slate-400 dark:text-gray-400 text-xs">Inclusive of all taxes</p>
                     </div>
-                    <span className="text-4xl font-black text-slate-900 dark:text-white">₹{total}</span>
+                    <div className="text-right">
+                      {appliedDiscount > 0 && <p className="text-slate-400 line-through text-sm font-bold">₹{total}</p>}
+                      <span className="text-4xl font-black text-slate-900 dark:text-white">₹{finalTotal}</span>
+                    </div>
                   </div>
                   <a
-                    href={`https://wa.me/917985212241?text=${encodeURIComponent(`Hi! I want to order:\n${cart.map(item => `- ${item.quantity}x ${item.name} (₹${item.price})`).join('\n')}\n\nTotal: ₹${total}`)}`}
+                    href={`https://wa.me/9120594727?text=${encodeURIComponent(`Hi! I want to order:\n${cart.map(item => `- ${item.quantity}x ${item.name} (₹${item.price})`).join('\n')}\n\nSubtotal: ₹${total}${appliedCoupon ? `\nCoupon: ${appliedCoupon} (-₹${appliedDiscount})` : ''}\nFinal Total: ₹${finalTotal}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-6 bg-green-600 hover:bg-green-700 text-white font-black rounded-2xl flex items-center justify-center gap-3 transition-all hover:scale-[1.02] shadow-2xl shadow-green-600/20 text-lg uppercase tracking-widest"
