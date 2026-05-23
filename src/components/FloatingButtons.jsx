@@ -23,7 +23,7 @@ const FloatingButtons = () => {
   return (
     <div className="fixed bottom-28 md:bottom-8 right-4 md:right-6 z-[60] flex flex-col gap-4">
       <motion.a
-        href="https://wa.me/917985212241"
+        href="https://wa.me/9129497110"
         target="_blank"
         rel="noopener noreferrer"
         initial={{ scale: 0, y: 20 }}

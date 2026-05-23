@@ -52,7 +52,7 @@ const WhatsAppCTA = () => {
           
           <div className="flex flex-col gap-4 sm:flex-row items-center justify-center">
             <a
-              href="https://wa.me/917985212241?text=Hi%20Factory%20Price!%20I%20want%20to%20order%20wholesale%20stock."
+              href="https://wa.me/9129497110?text=Hi%20Factory%20Price!%20I%20want%20to%20order%20wholesale%20stock."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 px-12 py-6 bg-green-600 hover:bg-green-700 text-white font-black rounded-[1.5rem] transition-all hover:scale-105 shadow-2xl shadow-green-600/30 text-lg uppercase tracking-widest"

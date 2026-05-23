@@ -124,7 +124,7 @@ const ProductDetail = ({ onAddToCart, onAddToWishlist, wishlist }) => {
                 Add to Cart
               </button>
               <a
-                href={`https://wa.me/917985212241?text=Hi, I want to order ${product.name}`}
+                href={`https://wa.me/9129497110?text=Hi, I want to order ${product.name}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 rounded-[1.5rem] bg-[#25D366] px-8 py-4 text-sm font-black text-white uppercase tracking-[0.25em] transition-all hover:bg-[#1DA851] shadow-lg shadow-green-600/20"
@@ -148,7 +148,7 @@ const ProductDetail = ({ onAddToCart, onAddToWishlist, wishlist }) => {
                 Contact us on WhatsApp for faster wholesale order support, stock confirmation, and retailer pricing.
               </p>
               <a
-                href="https://wa.me/917985212241"
+                href="https://wa.me/9129497110"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-6 inline-flex items-center justify-center gap-3 rounded-full bg-white text-green-600 px-6 py-4 text-sm font-black uppercase tracking-[0.25em] hover:bg-slate-100 transition-all"
