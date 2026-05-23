@@ -14,6 +14,7 @@ import OrderPage from './components/OrderPage.jsx';
 import CollectionPage from './components/CollectionPage.jsx';
 import Preloader from './components/Preloader.jsx';
 import OfferPage from './components/OfferPage.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -95,6 +96,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="min-h-screen w-full bg-[var(--color-bg-light)] dark:bg-[var(--color-bg-dark)] text-[var(--color-text-light)] dark:text-[var(--color-text-dark)] relative overflow-x-hidden flex flex-col selection:bg-[var(--color-primary)] selection:text-white">
         <Preloader />
         <Navbar 
