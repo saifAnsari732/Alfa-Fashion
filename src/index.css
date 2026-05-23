@@ -4,27 +4,27 @@
 @tailwind utilities;
 
 :root {
-  /* Color Palette - Premium Light Luxury */
-  --color-primary: #8C7B65; /* Elegant taupe/gold */
-  --color-primary-light: #B8A895;
-  --color-primary-dark: #635645;
-  --color-secondary: #2C302E; /* Charcoal slate */
-  --color-secondary-dark: #1A1C1B;
-  --color-accent: #E3D5CA;
+  /* Color Palette - Minimalist Modern Fashion (Charcoal, Gray, White) */
+  --color-primary: #111827; /* Deep Charcoal/Black */
+  --color-primary-light: #374151;
+  --color-primary-dark: #030712;
+  --color-secondary: #4B5563; /* Muted Gray */
+  --color-secondary-dark: #1F2937;
+  --color-accent: #16A34A; /* Emerald Green (Strictly for WhatsApp/Success) */
   
-  /* Always Light Mode Surfaces for Premium Feel */
-  --color-bg-dark: #FAF8F5;
-  --color-surface-dark: #FFFFFF;
-  --color-border-dark: rgba(0, 0, 0, 0.05);
-  --color-text-dark: #2C302E;
-  --color-text-muted-dark: #8B8B8B;
+  /* App Backgrounds & Surfaces */
+  --color-bg-dark: #0F172A;
+  --color-surface-dark: #1E293B;
+  --color-border-dark: rgba(255, 255, 255, 0.1);
+  --color-text-dark: #F8FAFC;
+  --color-text-muted-dark: #94A3B8;
 
-  /* Light Mode Surfaces */
-  --color-bg-light: #FAF8F5; /* Creamy off-white */
-  --color-surface-light: #FFFFFF;
-  --color-border-light: rgba(0, 0, 0, 0.05);
-  --color-text-light: #2C302E; /* Charcoal */
-  --color-text-muted-light: #8B8B8B;
+  /* Light Mode Surfaces - App scaffolding */
+  --color-bg-light: #FFFFFF; /* Pure white background for fashion focus */
+  --color-surface-light: #F9FAFB; /* Subtle gray for cards/sections */
+  --color-border-light: rgba(0, 0, 0, 0.04);
+  --color-text-light: #111827; /* Deep charcoal text */
+  --color-text-muted-light: #6B7280;
 
   /* Typography */
   --font-main: 'Inter', sans-serif;
