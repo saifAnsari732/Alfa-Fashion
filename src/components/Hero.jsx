@@ -62,7 +62,7 @@ const Hero = () => {
                 Explore Collections
               </a>
               <a
-                href="https://wa.me/9120594727"
+                href="https://wa.me/9129497110"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-10 py-3 sm:py-4 rounded-3xl bg-green-600 text-white font-black tracking-wide hover:bg-green-700 transition-all w-full sm:w-auto text-sm sm:text-base"

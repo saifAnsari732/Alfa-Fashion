@@ -12,7 +12,7 @@ const ComboNewArrived = ({ onAddToCart, onAddToWishlist, wishlist }) => {
   const handleWhatsAppOrder = (product) => {
     const message = `Hello! I would like to order the combo: *${product.name}* (Price: ₹${product.price}) from Alfa Lifestyle. Please confirm availability.`;
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/9120594727?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/9129497110?text=${encodedMessage}`, '_blank');
   };
 
   return (
@@ -105,7 +105,7 @@ const ComboNewArrived = ({ onAddToCart, onAddToWishlist, wishlist }) => {
                     </motion.button>
 
                     <motion.a
-                      href={`https://wa.me/9120594727?text=${encodeURIComponent(`Hi, I want to order the combo: ${product.name} (Price: ₹${product.price})`)}`}
+                      href={`https://wa.me/9129497110?text=${encodeURIComponent(`Hi, I want to order the combo: ${product.name} (Price: ₹${product.price})`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}

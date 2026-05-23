@@ -168,7 +168,7 @@ const CartDrawer = ({ isOpen, onClose, cart, onRemove, onUpdateQuantity }) => {
                     </div>
                   </div>
                   <a
-                    href={`https://wa.me/9120594727?text=${encodeURIComponent(`Hi! I want to order:\n${cart.map(item => `- ${item.quantity}x ${item.name} (₹${item.price})`).join('\n')}\n\nSubtotal: ₹${total}${appliedCoupon ? `\nCoupon: ${appliedCoupon} (-₹${appliedDiscount})` : ''}\nFinal Total: ₹${finalTotal}`)}`}
+                    href={`https://wa.me/9129497110?text=${encodeURIComponent(`Hi! I want to order:\n${cart.map(item => `- ${item.quantity}x ${item.name} (₹${item.price})`).join('\n')}\n\nSubtotal: ₹${total}${appliedCoupon ? `\nCoupon: ${appliedCoupon} (-₹${appliedDiscount})` : ''}\nFinal Total: ₹${finalTotal}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-6 bg-green-600 hover:bg-green-700 text-white font-black rounded-2xl flex items-center justify-center gap-3 transition-all hover:scale-[1.02] shadow-2xl shadow-green-600/20 text-lg uppercase tracking-widest"

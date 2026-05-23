@@ -39,7 +39,7 @@ const Footer = () => {
               <a href="#" className="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-500 group shadow-sm">
                 <InstagramIcon className="w-6 h-6 text-slate-500 dark:text-gray-400 group-hover:text-white" />
               </a>
-              <a href="https://wa.me/9120594727" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center hover:bg-green-600 hover:text-white hover:border-green-600 transition-all duration-500 group shadow-sm">
+              <a href="https://wa.me/9129497110" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center hover:bg-green-600 hover:text-white hover:border-green-600 transition-all duration-500 group shadow-sm">
                 <Phone className="w-6 h-6 text-slate-500 dark:text-gray-400 group-hover:text-white" />
               </a>
             </div>
@@ -89,7 +89,7 @@ const Footer = () => {
                 <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-white/5 flex items-center justify-center flex-shrink-0 text-blue-600">
                   <Phone className="w-5 h-5" />
                 </div>
-                <span className="text-slate-600 dark:text-gray-400 font-bold">+91 9120594727, +91 9120497110</span>
+                <span className="text-slate-600 dark:text-gray-400 font-bold">+91 9129497110, +91 9120497110</span>
               </li>
               <li className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-white/5 flex items-center justify-center flex-shrink-0 text-blue-600">

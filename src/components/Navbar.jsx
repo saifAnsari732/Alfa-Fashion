@@ -79,7 +79,7 @@ const Navbar = ({ isScrolled, theme, toggleTheme }) => {
               </motion.button>
 
               <a
-                href="https://wa.me/9120594727"
+                href="https://wa.me/9129497110"
                 target="_blank"
                 rel="noreferrer"
                 className="hidden sm:inline-flex px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-green-600 text-white text-xs sm:text-sm font-black tracking-wide hover:bg-green-700 transition-all shadow-lg shadow-green-600/20"
@@ -157,7 +157,7 @@ const Navbar = ({ isScrolled, theme, toggleTheme }) => {
 
               <div className="mt-12 space-y-4">
                 <a
-                  href="https://wa.me/9120594727"
+                  href="https://wa.me/9129497110"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 p-4 rounded-2xl bg-green-600 text-white font-bold shadow-lg shadow-green-600/20"

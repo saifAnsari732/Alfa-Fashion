@@ -114,7 +114,7 @@ const NewArrivals = ({ onAddToCart, onAddToWishlist, wishlist }) => {
                       <Heart className={`w-6 h-6 ${wishlist.includes(product.id) ? 'fill-current' : ''}`} />
                     </motion.button>
                     <motion.a
-                      href={`https://wa.me/9120594727?text=${encodeURIComponent(`Hi, I want to order ${product.name} (Price: ₹${product.price})`)}`}
+                      href={`https://wa.me/9129497110?text=${encodeURIComponent(`Hi, I want to order ${product.name} (Price: ₹${product.price})`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
@@ -154,7 +154,7 @@ const NewArrivals = ({ onAddToCart, onAddToWishlist, wishlist }) => {
                       <span className="text-base sm:text-xl font-black text-slate-900 dark:text-white leading-tight">₹{product.price}</span>
                     </div>
                     <a 
-                      href={`https://wa.me/9120594727?text=${encodeURIComponent(`Hi, I want to order ${product.name} (Price: ₹${product.price})`)}`}
+                      href={`https://wa.me/9129497110?text=${encodeURIComponent(`Hi, I want to order ${product.name} (Price: ₹${product.price})`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}

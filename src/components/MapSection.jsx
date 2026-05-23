@@ -39,7 +39,7 @@ const MapSection = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-slate-900 font-black text-lg">Call / WhatsApp</span>
-                <span className="text-red-600 font-bold">+91 9120594727, +91 9120497110</span>
+                <span className="text-red-600 font-bold">+91 9129497110, +91 9120497110</span>
               </div>
             </li>
             <li className="flex items-start gap-4">
